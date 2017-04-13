@@ -1,0 +1,19 @@
+html, body, .container {
+    font-size: 13px;
+    font-family: 'Lato', Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+  background-size: 100%;
+}
+
+.city_name{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.well {
+  margin:0 auto;
+}
