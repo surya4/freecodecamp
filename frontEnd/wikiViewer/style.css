@@ -57,3 +57,8 @@ html, body, .container {
   margin-bottom: 0;
   padding-bottom: 0;
 }
+
+#no_value p {
+  padding-top: 5%;
+  color: grey;
+}

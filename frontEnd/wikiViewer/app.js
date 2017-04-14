@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $('#query').keyup(function(e) {
         if (e.keyCode == 13) {
+          $("#article_row").empty();
             searchJson();
         }
     });
@@ -32,7 +33,7 @@ function searchJson() {
                 });
             } else {
               $('#article_row').append(
-                "<div id='no-value'><p>No data with this key word.Try something different.</p></div>");
+                "<div id='no_value' class='col-xs-11 text-right'><p>No data found with this keyword.Try something different.</p></div>");
                 // console.log("No data with this key word");
             }
         }
