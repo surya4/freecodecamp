@@ -1,10 +1,11 @@
 $(document).ready(function(){
-  var session = 25,
-      breaks = 5,
+  var session = 1,
+      breaks = 1,
       clock_min = session,
       clock_sec = 0,
       timeleft,
       sessionOn = false,
+      breakOn = false,
       timeleft = session*60;
       // var interval;
 
@@ -22,7 +23,9 @@ $('.time').one('click', function () {
 
 function sessionTimer() {
 var intervalCount = setInterval(function () {
+  console.log(timeleft);
   if (timeleft > 0) {
+    timeleft--;
     if (clock_min !== 0 && clock_sec ===0) {
       clock_sec = 59;
       clock_min = clock_min -1;;
@@ -30,12 +33,20 @@ var intervalCount = setInterval(function () {
     } else {
       clock_sec = clock_sec -1;
       updateClock();
-      console.log(clock_min+":"+clock_sec);
+      // console.log(clock_min+":"+clock_sec);
     }
   } else {
-    $(".time h2").html("Break");
-    clock_min = breaks;
-    timeleft = breaks*60;
+    if (breakOn === false) {
+      breakOn = true;
+      $(".time h2").html("Break");
+      clock_min = breaks;
+      timeleft = breaks*60;
+    } else {
+      $(".time h2").hide();
+      $(".clock").html("Stop");
+      $(".clock").css("fontSize", "6em");
+      clearInterval(intervalCount);
+    }
   }
 },1000);
 };
