@@ -1,6 +1,6 @@
 $(document).ready(function(){
-  var session = 1,
-      breaks = 1,
+  var session = 25,
+      breaks = 5,
       clock_min = session,
       clock_sec = 0,
       timeleft,
