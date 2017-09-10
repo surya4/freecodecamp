@@ -1,1 +1,1 @@
-colletion of all the files used in freeCodeCamp certifications
+### Colletion of all the projects made for FreeCodeCamp
