@@ -1,1 +1,1 @@
-### Colletion of all the projects made for FreeCodeCamp
+### Collection of all the projects made for FreeCodeCamp
